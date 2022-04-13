@@ -1,0 +1,29 @@
+.image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.item {
+  height: 130px;
+  width: 18%;
+  max-width: 130px;
+  border: 5px solid var(--primary);
+  background-color: white;
+}
+
+.title {
+  height: 20%;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  text-transform: capitalize;
+  font-family: var(--font-primary);
+  font-size: 1.2em;
+  opacity: 0.5;
+  background-color: black;
+}

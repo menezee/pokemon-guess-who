@@ -1,0 +1,12 @@
+:root {
+  --primary: #7fb069;
+  --bg: #fffbbd;
+  --secondary: #e6aa68;
+  --font-primary: "Eczar", serif;
+  --font-secondary: "Roboto", sans-serif;
+}
+
+#root {
+  height: 100vh;
+  box-sizing: border-box;
+}

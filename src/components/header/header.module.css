@@ -1,0 +1,15 @@
+.header {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--secondary);
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: 5em;
+  color: var(--primary);
+}
