@@ -5,6 +5,5 @@
   "no-more-tips": "Não há dicas disponíveis!",
   "successful-submission": "Você acertou! 😁\nSeu score foi: {{ score }}\nStats: {{ reason }}\n",
   "unsuccessful-submission": "Você errou! 🥴\nResposta certa era: {{ pokemonName }}\nStats: {{ reason }}",
-  "submission-confirmation": "Tem certeza que deseja escolher o {{ pokemonName }}?",
-  "duplicated-filter": "Filtro já adicionado!"
+  "submission-confirmation": "Tem certeza que deseja escolher o {{ pokemonName }}?"
 }

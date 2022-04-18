@@ -23,13 +23,7 @@ export default function App() {
   
   const addFilter = newFilter => {
     const { attr, value } = parseFilterInput(newFilter);
-    
-    const isDuplicate = filters.some(filter => filter.name === attr && filter.value === value);
-    if (isDuplicate) {
-      alert(getMessage('duplicated-filter'));
-    } else {
-      setFilters([...filters, { name: attr, value }]);
-    }
+    setFilters([...filters, { name: attr, value }]);
   };
   const reset = () => {
     setFilters([]);
