@@ -39,7 +39,7 @@ export default function App() {
   };
   
   const guessPokemon = pokemon => {
-    const confirmed = window?.confirm(getMessage('submission-confirmation', { pokemonName: chosenPokemon.name }));
+    const confirmed = window?.confirm(getMessage('submission-confirmation', { pokemonName: pokemon.name }));
     if (confirmed) {
       const { score, reason } = calculateScore(filters.length, startTime, amountOfHintsUsed);
       
