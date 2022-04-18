@@ -9,8 +9,10 @@
   height: 130px;
   width: 18%;
   max-width: 130px;
+
   border: 5px solid var(--primary);
   background-color: white;
+  cursor: pointer;
 }
 
 .title {

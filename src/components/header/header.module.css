@@ -3,13 +3,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+
   background-color: var(--bg);
   border-bottom: 1px solid var(--secondary);
-  box-sizing: border-box;
 }
 
 .title {
   font-family: var(--font-primary);
   font-size: 5em;
   color: var(--primary);
+}
+
+.title__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+
+.buttons__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  gap: 10px;
+}
+
+.button {
+  background-color: var(--secondary);
+  padding: .5rem;
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
 }
