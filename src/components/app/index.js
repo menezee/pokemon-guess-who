@@ -72,7 +72,7 @@ export default function App() {
   
           {/* FILTERS DROPDOWN */}
           <section className={styles.selectable}>
-            <Filter selectFilter={addFilter} />
+            <Filter selectFilter={addFilter} selectedFilters={filters} />
           </section>
   
           {/* SELECTED FILTERS TAGS */}
