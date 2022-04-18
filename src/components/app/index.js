@@ -35,15 +35,16 @@ export default function App() {
     setFilters([]);
     setChosenPokemonIdx(randomIntFromInterval(0, pokemons.length - 1));
     setStartTime(Date.now());
+    setAmountOfHintsUsed(0);
   };
   
   const guessPokemon = pokemon => {
     const confirmed = window?.confirm(getMessage('submission-confirmation', { pokemonName: chosenPokemon.name }));
     if (confirmed) {
-      const { score, reason } = calculateScore(filters.length, startTime);
+      const { score, reason } = calculateScore(filters.length, startTime, amountOfHintsUsed);
       
       if (pokemon.name === chosenPokemon.name) {
-        alert(getMessage('successful-submission', { score, reason, amountOfHintsUsed }));
+        alert(getMessage('successful-submission', { score, reason }));
       } else {
         alert(getMessage('unsuccessful-submission', { pokemonName: chosenPokemon.name, reason }));
       }

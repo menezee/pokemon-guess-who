@@ -38,18 +38,22 @@ function parseFilterInput(filterInput /* color-green, types-fairy */) {
 
 const BASE_SCORE = 100;
 
-function calculateScore(amountOfFilters, startTime) {
+function calculateScore(amountOfFilters, startTime, amountOfHints) {
   const TIME_THRESHOLD = 30;
   const FILTER_THRESHOLD = 5;
+  const HINT_THRESHOLD = 1;
   
   const FILTER_PENALTY = 8;
   const TIME_PENALTY = 0.5;
+  const HINT_PENALTY = 14;
   
   const totalTimeInSeconds = (Date.now() - startTime) / 1000;
+  
   const timePenalty = totalTimeInSeconds > TIME_THRESHOLD ? (totalTimeInSeconds - TIME_THRESHOLD) * TIME_PENALTY : 0;
   const filterPenalty = amountOfFilters > FILTER_THRESHOLD ? (amountOfFilters - FILTER_THRESHOLD) * FILTER_PENALTY : 0;
+  const hintPenalty = amountOfHints > HINT_THRESHOLD ? (amountOfHints - HINT_THRESHOLD) * HINT_PENALTY : 0;
   
-  const score = BASE_SCORE - timePenalty - filterPenalty;
+  const score = BASE_SCORE - timePenalty - filterPenalty - hintPenalty;
   const finalScore = (
     score > 0 ?
       score.toFixed(2) :
@@ -62,6 +66,7 @@ function calculateScore(amountOfFilters, startTime) {
       totalTimeInSeconds,
       timePenalty: timePenalty.toFixed(2),
       filterPenalty: filterPenalty.toFixed(2),
+      hintPenalty: hintPenalty.toFixed(2),
     }),
   };
 }

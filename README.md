@@ -1,23 +1,24 @@
-# App criado com create-react-app
+[![Netlify Status](https://api.netlify.com/api/v1/badges/766b9279-d89c-4e18-83f5-378a1bac2c9b/deploy-status)](https://app.netlify.com/sites/reliable-florentine-94c173/deploys)
 
-[Create React App](https://github.com/facebook/create-react-app)
+# Guess Who - Pokémon flavour
+Guess characteristics until you find the Pokémon.
 
-## Scripts disponíveis
+# Requirements
+- [Node.js](https://nodejs.org/en/download/)
+- (Optional) [nvm](https://github.com/nvm-sh/nvm)
 
-### `npm start`
+# Instructions
+if you have nvm:
+```shell
+nvm use
+```
+Then:
+```shell
+npm i
+npm start
+```
 
-Roda o app em modo de desenvolvimento.\
-Abra [http://localhost:3000](http://localhost:3000) para ver no browser.
-
-A página atualiza quando vocês faz mudanças.\
-Também é possível ver erros de lint no console.
-
-### `npm test`
-
-### `npm run build`
-
-Constrói o app para produção dentro da pasta `build`.\
-Cria o bundle do React em modo de produção e otimiza para melhor performance.
-
-## Documentação
-https://create-react-app.dev/
+# Build
+```shell
+npm run build
+```
